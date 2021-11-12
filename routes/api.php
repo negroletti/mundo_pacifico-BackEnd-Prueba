@@ -25,13 +25,13 @@ Route::get('ciudades/provincia/{id}','App\Http\Controllers\ciudadController@getC
 Route::get('calles','App\Http\Controllers\calleController@getCalles');
 Route::get('calles/id/{id}', 'App\Http\Controllers\calleController@getCallesNombre');
 
-Route::post('regiones/add','App\Http\Controllers\regionController@addRegion');
-Route::post('provincias/add','App\Http\Controllers\provinciaController@addProvincia');
-Route::post('ciudades/add','App\Http\Controllers\ciudadController@addCiudad');
+//Route::post('regiones/add','App\Http\Controllers\regionController@addRegion');
+//Route::post('provincias/add','App\Http\Controllers\provinciaController@addProvincia');
+//Route::post('ciudades/add','App\Http\Controllers\ciudadController@addCiudad');
 Route::post('calles/add','App\Http\Controllers\calleController@addCalle');
 
-Route::put('regiones/{id}','App\Http\Controllers\regionController@updateRegion');
-Route::put('provincias/{id}','App\Http\Controllers\provinciaController@updateProvincia');
-Route::put('ciudades/{id}','App\Http\Controllers\ciudadController@updateCiudad');
+//Route::put('regiones/{id}','App\Http\Controllers\regionController@updateRegion');
+//Route::put('provincias/{id}','App\Http\Controllers\provinciaController@updateProvincia');
+//Route::put('ciudades/{id}','App\Http\Controllers\ciudadController@updateCiudad');
 Route::put('calles/{id}','App\Http\Controllers\calleController@updateCalle');
 
