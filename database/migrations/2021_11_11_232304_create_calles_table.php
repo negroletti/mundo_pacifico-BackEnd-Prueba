@@ -16,7 +16,8 @@ class CreateCallesTable extends Migration
         Schema::create('calles', function (Blueprint $table) {
             $table->id();
             $table->string('nombre_calle');
-            $table->foreign('id')->references('id')->on('ciudades');
+            $table->unsignedBigInteger('id_ciudad');
+            $table->foreign('id_ciudad')->references('id')->on('ciudades');
             $table->timestamps();
         });
     }

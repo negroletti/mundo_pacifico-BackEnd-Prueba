@@ -16,7 +16,8 @@ class CreateProvinciasTable extends Migration
         Schema::create('provincias', function (Blueprint $table) {
             $table->id();
             $table->string('nombre_provincia');
-            $table->foreign('id')->references('id')->on('regions');
+            $table->unsignedBigInteger('id_region');
+            $table->foreign('id_region')->references('id')->on('regions');
             $table->timestamps();
         });
     }
