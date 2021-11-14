@@ -58,4 +58,15 @@ class calleController extends Controller
         }
         return response()->json($calles);
     }
+    //delete calle
+    public function deleteCalle($id)
+    {
+        $calles = Calles::find($id);
+        if(!$calles)
+        {
+            return response()->json(['mensaje' => 'No se encuentra la calle'], 404);
+        }
+        $calles->delete();
+        return response()->json(['mensaje' => 'Se ha eliminado la calle']);
+    }
 }
