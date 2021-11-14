@@ -40,4 +40,13 @@ class provinciaController extends Controller
         $provincia->save();
         return response()->json($provincia, 200);
     }
+    //listar provincia por id
+    public function getProvincia($id)
+    {
+        $provincia = Provincias::find($id);
+        if (!$provincia) {
+            return response()->json(['mensaje' => 'No se encuentra la provincia con id: ' . $id], 404);
+        }
+        return response()->json($provincia, 200);
+    }
 }

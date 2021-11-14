@@ -48,4 +48,14 @@ class calleController extends Controller
         $calles->save();
         return response()->json($calles);
     }
+    //listar calle por id
+    public function getCalle($id)
+    {
+        $calles = Calles::find($id);
+        if(!$calles)
+        {
+            return response()->json(['mensaje' => 'No se encuentra la calle'], 404);
+        }
+        return response()->json($calles);
+    }
 }

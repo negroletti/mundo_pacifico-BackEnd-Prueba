@@ -29,4 +29,12 @@ class regionController extends Controller
         $region->save();
         return response()->json($region, 200);
     }
+    //Listar por id
+    public function getRegion($id){
+        $region = Regions::find($id);
+        if(!$region){
+            return response()->json(['mensaje' => 'No se encuentra la region'], 404);
+        }
+        return response()->json($region, 200);
+    }
 }

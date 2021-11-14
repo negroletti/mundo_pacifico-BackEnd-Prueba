@@ -40,4 +40,13 @@ class ciudadController extends Controller
         $ciudad->save();
         return response()->json($ciudad, 200);
     }
+    //lsitar ciudad por id
+    public function getCiudad($id)
+    {
+        $ciudad = Ciudades::find($id);
+        if (!$ciudad) {
+            return response()->json(['mensaje' => 'no se encuentra la ciudad'], 404);
+        }
+        return response()->json($ciudad, 200);
+    }
 }
