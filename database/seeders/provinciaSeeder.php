@@ -15,8 +15,8 @@ class provinciaSeeder extends Seeder
     {
         $now = now();
         $provincias = [
-            ['Concepción','1'],
-            ['Itata',2],
+            ['Concepción',1],
+            ['Itata',2]
         ];
         $provincias = array_map(function($provincia) use ($now){
             return [
