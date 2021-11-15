@@ -46,7 +46,8 @@ Route::get('ciudades/provincia/{id}','App\Http\Controllers\ciudadController@getC
 Route::get('calles','App\Http\Controllers\calleController@getCalles');
 Route::get('calles/{id}', 'App\Http\Controllers\calleController@getCalle');
 Route::get('calles/id/{id}', 'App\Http\Controllers\calleController@getCallesNombre');
-Route::post('calles/','App\Http\Controllers\calleController@addCalle');
+Route::get('calles/get/all', 'App\Http\Controllers\calleController@getCallesAll');
+Route::post('calles/add','App\Http\Controllers\calleController@addCalle');
 Route::put('calles/{id}','App\Http\Controllers\calleController@updateCalle');
 Route::delete('calles/{id}','App\Http\Controllers\calleController@deleteCalle');
 

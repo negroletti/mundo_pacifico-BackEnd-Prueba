@@ -22,11 +22,21 @@ class calleController extends Controller
             ->join('provincias', 'ciudades.id_provincia', '=', 'provincias.id')
             ->join('regions', 'provincias.id_region', '=', 'regions.id')
             ->where('calles.id', '=', $id)
-            ->select('calles.nombre_calle', 'ciudades.nombre_ciudad', 'provincias.nombre_provincia', 'regions.nombre_region')
+            ->select('calles.nombre_calle', 'ciudades.nombre_ciudad', 'provincias.nombre_provincia', 'regions.Nombre_region')
             ->get(); 
         return response()->json($respuesta);
-    } 
-    //post provincia
+    }
+    //get all data from calles
+    public function getCallesAll()
+    {
+        $respuesta = Calles::join('ciudades', 'calles.id_ciudad', '=', 'ciudades.id')
+            ->join('provincias', 'ciudades.id_provincia', '=', 'provincias.id')
+            ->join('regions', 'provincias.id_region', '=', 'regions.id')
+            ->select('calles.*', 'ciudades.*', 'provincias.*', 'regions.*')
+            ->get(); 
+        return response()->json($respuesta);
+    }
+    //post calle
     public function addCalle(Request $request)
     {
         $calles = new Calles();
@@ -67,6 +77,6 @@ class calleController extends Controller
             return response()->json(['mensaje' => 'No se encuentra la calle'], 404);
         }
         $calles->delete();
-        return response()->json(['mensaje' => 'Se ha eliminado la calle']);
+        return response()->json(['mensaje' => 'Se ha eliminado la calle'],204);
     }
 }
