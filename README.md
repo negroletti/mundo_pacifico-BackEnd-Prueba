@@ -8,7 +8,7 @@ _Requerimiento entregado en prueba técnica_
 
 #### Iniciar Laragon
 
-#### Clickear en el botón "Base de datos" y generar una nueva conexión
+#### Clickear en el botón "Database" y generar una nueva conexión
 
 #### Abrir dicha conexión y crear una base de datos en ella de nombre a elección
 
@@ -62,7 +62,7 @@ php artisan db:seed
 ```
 
 #### Finalmente la api quedará corriendo en la URL definida por laragon
-En este caso debería ser "http://mundo_pacifico.test"
+En este caso debería ser "http://mundopacifico-api.test"
 
 Para tener conocimiento de las rutas (en caso de querer probar api con Postman o similar) revisar los arhivos de la carpeta Routes
 
