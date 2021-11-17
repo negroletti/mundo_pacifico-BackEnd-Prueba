@@ -12,7 +12,7 @@ _Requerimiento entregado en prueba técnica_
 
 #### Abrir dicha conexión y crear una base de datos en ella de nombre a elección
 
-#### Iniciar la terminal de Laragon y escribir:
+#### Iniciar la terminal de Laragon, navegar a la carpeta clonada y escribir:
 
 ```
 composer install
@@ -30,9 +30,6 @@ php artisan key:generate
 #### Una vez generada la key y el archivo .env se procede a la configuración de este
 
 ## Configurar Base de datos
-
-#### Ingresar la key generada por php artisan en la linea
-_ APP_KEY=
 
 #### Posteriormente edite las credenciales de su base de datos
 
@@ -62,7 +59,7 @@ php artisan db:seed
 ```
 
 #### Finalmente la api quedará corriendo en la URL definida por laragon
-En este caso debería ser "http://mundopacifico-api.test"
+En este caso debería ser "http://mundo_pacifico.test"
 
 Para tener conocimiento de las rutas (en caso de querer probar api con Postman o similar) revisar los arhivos de la carpeta Routes
 
