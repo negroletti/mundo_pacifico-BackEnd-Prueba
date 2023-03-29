@@ -64,7 +64,9 @@ En este caso debería ser "http://mundo_pacifico.test"
 Para tener conocimiento de las rutas (en caso de querer probar api con Postman o similar) revisar los arhivos de la carpeta Routes
 
 # IMPORTANTE: Idealmente utilizar Laragon pues entrega todas las herramientas necesarias. En caso de no usarlo se requiere:
+```
 - PHP 7.3
 - Composer 2.1
 - Base de datos MySQL
 - WAMP o XAMPP con el projecto en la carpeta requerida
+```
