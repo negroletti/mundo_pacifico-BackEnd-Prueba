@@ -2,8 +2,9 @@
 _Requerimiento entregado en prueba técnica_
 
 ## Requisitos
+```
 - Laragon
-
+```
 #### Clonar este repositorio en la carpeta de Laragon "C:/Laragon/www"
 
 #### Iniciar Laragon
